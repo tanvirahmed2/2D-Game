@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #0E1A40;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserController">
+    <VBox alignment="CENTER" layoutX="7.0" minHeight="650.0" minWidth="900.0" spacing="10" style="-fx-background-color: #0E1A40;">
+        <VBox prefHeight="78.0" prefWidth="900.0">
+            <children>
+                <Button fx:id="back" onAction="#back" style="-fx-background-color: #FF4081; -fx-text-fill: white;" text="Back">
+                    <font>
+                        <javafx.scene.text.Font size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+        <Label prefHeight="70.0" prefWidth="242.0" style="-fx-font-size: 40; -fx-font-weight: bold; -fx-text-fill: white;" text="USER MENU ">
+            <font>
+                <javafx.scene.text.Font size="20.0" />
+            </font></Label>
+
+        <VBox fx:id="buttonBox" alignment="CENTER" spacing="10">
+            <Button onAction="#createUserButtonAction" style="-fx-background-color: #FF4081; -fx-text-fill: white;" text="Create User">
+                <font>
+                    <javafx.scene.text.Font size="18.0" />
+                </font></Button>
+            <Button onAction="#loadUserButtonAction" style="-fx-background-color: #FF4081; -fx-text-fill: white;" text="Load User">
+                <font>
+                    <javafx.scene.text.Font size="18.0" />
+                </font></Button>
+        </VBox>
+
+        <VBox fx:id="createUserBox" alignment="CENTER" spacing="5" visible="false">
+            <Label style="-fx-text-fill: white;" text="Enter User Name:" />
+            <TextField fx:id="userNameField" style="-fx-background-color: white;" />
+            <Button onAction="#createUserAction" style="-fx-background-color: navy; -fx-text-fill: white;" text="Create" />
+        </VBox>
+    </VBox>
+</AnchorPane>
